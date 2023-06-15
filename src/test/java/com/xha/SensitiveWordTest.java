@@ -15,9 +15,9 @@ public class SensitiveWordTest {
 
     @Test
     public void SensitiveWordFilter() {
-        String string = "我是成人视频，打倒日本鬼子";
+        String string = "我是成人视频，打跑日本鬼子";
         String replaceSensitiveWord = sensitiveReplaceUtil
                 .replaceSensitiveWord(string, 2);
-        System.out.println(replaceSensitiveWord);
+        System.out.println(string + "->" + replaceSensitiveWord);
     }
 }
