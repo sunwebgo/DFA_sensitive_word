@@ -33,14 +33,14 @@ public class SensitiveReplaceUtil {
      */
     public static String replaceChar = "*";
 
+    /**
+     * 初始化敏感词库
+     *
+     * @throws IOException ioexception
+     */
     @PostConstruct
     public void init() throws IOException {
         sensitiveWordHashMap = new SensitiveWordInitialize().getSensitiveWordHashMap();
-    }
-    /**
-     * 在构造函数中初始化敏感词库
-     */
-    private SensitiveReplaceUtil() {
     }
 
     /**
