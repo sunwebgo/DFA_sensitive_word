@@ -43,6 +43,26 @@ public class SensitiveReplaceUtil {
         sensitiveWordHashMap = new SensitiveWordInitialize().getSensitiveWordHashMap();
     }
 
+//    //私有化构造器
+//    private SensitiveReplaceUtil() {
+//        try {
+//            sensitiveWordHashMap = new SensitiveWordInitialize().getSensitiveWordHashMap();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+//
+//    //静态内部类，创建单例
+//    private static class StaticHolder {
+//        private static final SensitiveReplaceUtil INSTANCE = new SensitiveReplaceUtil();
+//    }
+//
+//    //提供公共方法获取单例
+//    public static SensitiveReplaceUtil getInstance() {
+//        return StaticHolder.INSTANCE;
+//    }
+
+
     /**
      * 替换字符串当中的敏感词
      *
