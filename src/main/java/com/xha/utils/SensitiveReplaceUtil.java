@@ -27,7 +27,7 @@ public class SensitiveReplaceUtil {
     /**
      * 最大匹配规则，如：敏感词库["中国","中国人"]，语句："我是中国人"，匹配结果：我是[中国人]
      */
-    public static int maxMatchType = 2;
+    public static int maxMatchType = 2; 
     /**
      * 敏感词替换词
      */
