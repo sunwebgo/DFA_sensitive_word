@@ -23,15 +23,15 @@ public class SensitiveReplaceUtil {
     /**
      * 最小匹配规则，如：敏感词库["中国","中国人"]，语句："我是中国人"，匹配结果：我是[中国]人
      */
-    public static int minMatchType = 1;
+    private static int minMatchType = 1;
     /**
      * 最大匹配规则，如：敏感词库["中国","中国人"]，语句："我是中国人"，匹配结果：我是[中国人]
      */
-    public static int maxMatchType = 2; 
+    private static int maxMatchType = 2;
     /**
      * 敏感词替换词
      */
-    public static String replaceChar = "*";
+    private static String replaceChar = "*";
 
     /**
      * 初始化敏感词库
@@ -39,7 +39,7 @@ public class SensitiveReplaceUtil {
      * @throws IOException ioexception
      */
     @PostConstruct
-    public void init() throws IOException {
+    private void init() throws IOException {
         sensitiveWordHashMap = new SensitiveWordInitialize().getSensitiveWordHashMap();
     }
 
@@ -107,7 +107,7 @@ public class SensitiveReplaceUtil {
      * @param matchType 匹配类型
      * @return {@link Set}<{@link String}>
      */
-    public Set<String> getSensitiveWord(String string, int matchType) {
+    private Set<String> getSensitiveWord(String string, int matchType) {
         Set<String> set = new HashSet<>();
 //        1.遍历字符串中的每一个字符
         for (int i = 0; i < string.length(); i++) {
@@ -130,7 +130,7 @@ public class SensitiveReplaceUtil {
      * @param matchType  匹配类型
      * @return int
      */
-    public int getStringLength(String string, int beginIndex, int matchType) {
+    private int getStringLength(String string, int beginIndex, int matchType) {
 //        1.当前敏感词长度，用作累加
         int nowLength = 0;
 //        2.最终敏感词长度

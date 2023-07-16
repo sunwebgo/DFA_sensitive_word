@@ -35,7 +35,7 @@ public class SensitiveWordInitialize {
      * @return {@link HashMap}<{@link String}, {@link Object}>
      * @throws IOException ioexception
      */
-    public HashMap<String, Object> getSensitiveWordHashMap() throws IOException {
+    protected HashMap<String, Object> getSensitiveWordHashMap() throws IOException {
         log.info("敏感词库初始化");
         Set<String> strings = readSensitiveWordFile();
         sensitiveWordHashMap = (HashMap<String, Object>) initSensitiveHashMap(strings);
