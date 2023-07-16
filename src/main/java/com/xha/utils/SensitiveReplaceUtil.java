@@ -58,7 +58,7 @@ public class SensitiveReplaceUtil {
 //    }
 //
 //    //提供公共方法获取单例
-//    public static SensitiveReplaceUtil getInstance() {
+//    public static synchronized SensitiveReplaceUtil getInstance() {
 //        return StaticHolder.INSTANCE;
 //    }
 
